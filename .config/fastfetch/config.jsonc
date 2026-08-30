@@ -1,0 +1,62 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": { 
+    	"type": "builtin",
+    	"padding": {
+    		"top": 1,
+    		"left": 2,
+    		"right": 2
+    	},
+    	"source": "void2_small"
+    },
+    "display": {
+        "separator": "  ",
+        "color": "white",
+        "constants": ["\u001b[37m", "\u001b[38;5;16m", "\u001b[38;5;17m", "\u001b[38;5;18m"]
+    },
+    "modules": [
+        "break",
+        {
+            "type": "custom",
+            "key": "╭───────────╮"
+        },
+        {
+            "type": "kernel",
+            "key": "│   kernel │",
+            "KeyColor": "white "
+        },
+        {
+            "type": "wm",
+            "key": "│ 󰇄  wm     │",
+            "KeyColor": "white "
+        },
+        {
+            "type": "packages",
+            "key": "│   pkgs   │",
+            "KeyColor": "white "
+        },
+        {
+            "type": "command",
+            "key": "│ 󱎫  age    │",
+            "KeyColor": "white ",
+            "text": "echo $(( ($(date +%s) - $(stat -c %W /)) / 86400)) days"
+        },
+        {
+            "type": "command",
+            "key": "│   ram    │",
+            "text": "free -m | awk 'NR==2{printf \"%.2f GiB / %.2f GiB\",$3/1024,$2/1024}'",
+            "KeyColor": "white "
+        },
+        {
+        	"type": "disk",
+        	"key": "│ 󰋊  disk   │",
+        	"format": "{1} / {2}",
+        	"keyColor": "white"
+        },
+        {
+            "type": "custom",
+            "key": "╰───────────╯"
+        },
+        "break"
+    ]
+}

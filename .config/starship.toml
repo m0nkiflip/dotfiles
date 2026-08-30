@@ -1,0 +1,28 @@
+# Archivo: ~/.config/starship.toml
+
+# Formato general del prompt
+format = """
+$username$hostname $directory$git_branch$character
+"""
+
+# Configurar el usuario
+[username]
+style_user = "bold green"
+show_always = true
+format = "   [󱞩 $user]($style)"
+
+# Configurar el hostname
+[hostname]
+ssh_only = false
+style = "bold white"
+format = " 󰹻 [voidpad]($style)"
+
+# Configurar el directorio
+[directory]
+style = "bold cyan"
+truncation_length = 3
+
+# Configurar el símbolo final
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"

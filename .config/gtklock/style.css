@@ -1,0 +1,73 @@
+/* Fondo general con ligera transparencia */
+window {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+/* Reloj principal */
+#clock-label {
+    font-family: "JetBrains Mono", "monospace";
+    font-size: 90px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Fecha */
+#date-label {
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: normal;
+	text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);	
+}
+
+/* 2. Etiqueta "Password:" */
+#input-label {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: normal;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Campo de entrada de contraseña */
+#input-field {
+    background-color: #303030;
+    color: #cdd6f4;
+    border: 2px solid #303030;
+    border-radius: 12px;
+    padding: 10px 15px;
+    font-size: 16px;
+    box-shadow: none;
+}
+
+/* Estado cuando la contraseña es incorrecta */
+#input-field.error {
+    border-color: #000000;
+    color: #000000;
+}
+
+/* Ocultar el mensaje de error por defecto */
+#error-label {
+    color: #000000;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+/* Boton de desbloqueo */
+button,
+#unlock-button {
+    background-image: none;
+    background-color: #303030;
+    color: #ffffff;
+    border: 1px solid #3b3b3b;
+    border-radius: 8px;
+    padding: 6px 14px;
+    box-shadow: none;
+}
+
+button:hover,
+#unlock-button:hover {
+    background-image: none;
+    background-color: #478061;
+    color: #ffffff;
+    border-color: #478061;
+}
