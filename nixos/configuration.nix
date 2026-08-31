@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -93,14 +93,16 @@
 
   # -- DISPLAY MANAGER y DESKTOP/WINDOW MANAGER --
   services.displayManager.ly.enable = true;
-  services.displayManager.sessionPackages = [ pkgs.mangowc ]; # WM
+  services.displayManager.sessionPackages = [
+    inputs.mangowc.packages.${pkgs.system}.default
+  ]; # WM
   # services.displayManager.gdm.enable = true; # DM
   # services.desktopManager.gnome.enable = true; # DE
 
   # --PAQUETES DEL SISTEMA--
   # Buscar paquetes y opciones en https://search.nixos.org/
   environment.systemPackages = with pkgs; [ 
-    mangowc
+    inputs.mangowc.packages.${pkgs.system}.default
     ly
     foot
     yazi
