@@ -1,0 +1,16 @@
+total 0
+lrwxrwxrwx 1 root root 22 Aug 18 15:05 NetworkManager -> /etc/sv/NetworkManager
+lrwxrwxrwx 1 root root 13 Aug 18 15:32 acpid -> /etc/sv/acpid
+lrwxrwxrwx 1 root root 19 Aug 18 14:41 agetty-tty1 -> /etc/sv/agetty-tty1
+lrwxrwxrwx 1 root root 19 Aug 18 14:57 agetty-tty2 -> /etc/sv/agetty-tty2
+lrwxrwxrwx 1 root root 18 Aug 20 01:05 bluetoothd -> /etc/sv/bluetoothd
+lrwxrwxrwx 1 root root 15 Aug 18 15:36 chronyd -> /etc/sv/chronyd
+lrwxrwxrwx 1 root root 12 Aug 18 13:44 dbus -> /etc/sv/dbus
+lrwxrwxrwx 1 root root 15 Aug 18 14:45 elogind -> /etc/sv/elogind
+-rw-r--r-- 1 root root  0 Aug 27 09:00 fwupd
+lrwxrwxrwx 1 root root 11 Aug 18 15:23 iwd -> /etc/sv/iwd
+lrwxrwxrwx 1 root root 16 Aug 28 15:07 libvirtd -> /etc/sv/libvirtd
+lrwxrwxrwx 1 root root 12 Aug 18 14:49 lidm -> /etc/sv/lidm
+lrwxrwxrwx 1 root root 11 Aug 18 15:32 tlp -> /etc/sv/tlp
+lrwxrwxrwx 1 root root 16 Aug 28 15:19 virtlogd -> /etc/sv/virtlogd
+lrwxrwxrwx 1 root root 14 Aug 19 18:36 zramen -> /etc/sv/zramen
