@@ -1,0 +1,29 @@
+# --- Estilo Minimalista Mako ---
+font=JetBrainsMono NF 13
+background-color=#0f0f0fff
+text-color=#ccccccff
+border-color=#333333ff
+border-size=1
+border-radius=4
+
+# Dimensiones y posición
+width=320
+height=110
+margin=15
+padding=12
+anchor=top-right
+
+# Tiempos
+default-timeout=5000
+ignore-timeout=0
+
+# Colores por urgencia
+[urgency=low]
+border-color=#333333ff
+
+[urgency=normal]
+border-color=#555555ff
+
+[urgency=critical]
+border-color=#ff5555ff
+default-timeout=0
