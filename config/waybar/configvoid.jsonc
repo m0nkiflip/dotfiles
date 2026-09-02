@@ -1,0 +1,97 @@
+[
+    {
+        "layer": "top",
+        "position": "top",
+        "height": 35,
+		"width": 1915,
+        "margin-top": 1,
+        "spacing": 6,
+        "modules-left": [
+            "custom/void",
+            "ext/workspaces"
+        ],
+        "modules-center": [
+            "clock"
+        ],
+        "modules-right": [
+	        "network",
+	        "bluetooth",
+	        "custom/surge",
+            "tray",
+            "battery",
+            "pulseaudio"
+        ],
+	"custom/void": {
+	    "format": "",
+            "tooltip": false,
+        "on-click": "~/.local/bin/fuzzel-powermenu"
+    	},
+    "custom/surge": {
+    	"format": "",
+    		"tooltip": false,
+    	"on-click": "foot -e Surge"
+    	},
+	"clock": {
+                "format": "{:%d %b - %I:%M %p}",
+                "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+                },
+	"bluetooth": {
+        	"format": "",
+        	"format-connected": " {device_alias}",
+        	"format-disabled": "󰂲",
+        	"on-click": "foot -e bluetui"
+        },
+	"ext/workspaces": {
+		"on-click": "activate",
+		"format": "{name}",
+	    },
+        "tray": {
+            "icon-size": 14,
+            "spacing": 8,
+            "show-passive-items": true
+        },
+        "battery": {
+            "states": {
+                "warning": 40,
+                "critical": 20
+            },
+            "format": "{icon} {capacity}%",
+            "format-icons": [
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "format-charging": " {capacity}%",
+            "format-plugged": " {capacity}%",
+            "tooltip": true,
+            "tooltip-format": "{timeTo} {capacity}%",
+            "on-click": "foot -e btop"
+            },
+	"custom/power": {
+	    "format": " ⏻ ",
+	    "tooltip": false,
+	    "on-click": "/home/mario/.config/rofi/scripts/powermenu.sh",
+	},
+	"network": {
+	    "format-wifi": " {icon}",
+	    "format-ethernet": "󰤮",
+	    "format-disconnected": "󰌙",
+	    "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+	    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+	    "on-click": "foot -e impala"
+	},
+    "pulseaudio": {
+        "format": "{icon} {volume}% ",
+        "format-muted": "\uf2e2 Muted ",
+        "on-click": "foot -e wiremix",
+        "format-icons": {
+            "default": [
+                "\uf026",
+                "\uf027",
+                "\uf028"
+	    ]
+        }
+   }
+}]

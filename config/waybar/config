@@ -1,0 +1,196 @@
+{
+    "layer": "top",
+    "height": 30,
+    "modules-left":
+    [
+    	"custom/void",
+        "ext/workspaces",
+    ],
+    "modules-center":
+    [
+        "clock"
+    ],
+    "modules-right":
+    [
+    	"tray",
+        "idle_inhibitor",
+        "network",
+        "pulseaudio#outputDevice",
+        "backlight",
+        "memory",
+        "battery"
+    ],
+
+
+    "ext/workspaces":
+    {
+        "format": "{id} {icon} ",
+        "format-icons":
+        {
+            "active": "",
+            "default": "",
+            "urgent": "",
+        },
+    },
+    "custom/void":{ 
+    	"format": "  ",
+    		"tooltip": false,
+    	"on-click": "~/.local/bin/fuzzel-powermenu"
+    },
+
+    "tray":
+    {
+        "icon-size": 21,
+        "spacing": 10
+    },
+
+    "idle_inhibitor": {
+        "tooltip-format-activated": "Idle inhibitor active",
+        "tooltip-format-deactivated": "Idle inhibitor not active",
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " ",
+        }
+    },
+
+    "clock":
+    {
+        "format": "{:%d %B - %I:%M %p}",
+        "tooltip": false
+    },
+
+    "pulseaudio#outputDevice":
+    {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon} 󰂰 {volume}%",
+        "format-muted": "󰖁",
+        "format-icons":
+        {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default":
+            [
+                "", "", "󰕾",  ""
+            ],
+        },
+        "tooltip-format": "{desc}",
+
+        "on-click": "foot -e wiremix -t 3"
+    },
+
+    "pulseaudio#inputDevice": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "tooltip-format": "{source_desc}",
+
+        "on-click": "foot -e wiremix -t 4"
+    },
+
+    "network":
+    {
+        "format-wifi": "{icon}",
+        "format-disconnected": "󰤮",
+        "format-disabled": "󰤫",
+        "tooltip-format-ethernet": "Interface: {ifname}\nIP address: {ipaddr}\nGateway address: {gwaddr}\nSubnetmask: {netmask}",
+        "tooltip-format-wifi": "SSID: {essid}\nIP address: {ipaddr}\nGateway address: {gwaddr}\nSubnetmask: {netmask}",
+        "on-click": "foot -e impala",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+    },
+
+    "cpu":
+    {
+        "format": " {usage}% ",
+    },
+
+    "backlight":
+    {
+        "format": "{icon} {percent}%",
+        "states":
+        {
+            "1": 86,
+            "2": 71,
+            "3": 56,
+            "4": 41,
+            "5": 26,
+            "6": 11,
+            "7": 0
+        },
+        "format-icons":
+            [
+            "",
+        "",
+        "",
+        "󰃞",
+        "󰃝",
+        "󰃟",
+        "󰃠"
+            ],
+    },
+
+    "hyprland/language":
+    {
+        "format-en": "EN",
+        "format-ar": "AR",
+        "format-zh": "ZH",
+        "format-in": "HI",
+        "format-es": "ES",
+        "format-fr": "FR",
+        "format-ru": "RU",
+        "format-pt": "PT",
+        "format-bn": "BN",
+        "format-de": "DE"
+    },
+
+    "memory":
+    {
+        "format": " {percentage}%",
+        "tooltip-format": "Memory: {used}GiB/{total}GiB\nSwap: {swapUsed}GiB/{swapTotal}GiB",
+        "interval": 1,
+        "on-click": "foot -e btop"
+    },
+
+    "battery":
+    {
+        "states":
+        {
+            "tooMuch": 100,
+            "good": 80,
+            "meh": 50,
+            "warning": 40,
+            "critical": 20
+        },
+
+        "format": "{icon} {capacity}%",
+
+        "format-charging": " {capacity}%",
+        "format-plugged": "󱘖 {capacity}%",
+        "format-full": "{icon} Full",
+        "format-icons":
+        [
+            "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+        ],
+
+        "format-time": "{H}h {M}min",
+        "tooltip": true,
+        "tooltip-format": "{timeTo} {power}w",
+    }
+
+/*    "power-profiles-daemon": {
+        "format": "{icon} ",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons":
+        {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }*/
+    },
+}
