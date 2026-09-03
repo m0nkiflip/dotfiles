@@ -1,6 +1,6 @@
 {
     "layer": "top",
-    "height": 30,
+    "height": 28,
     "modules-left":
     [
     	"custom/void",
@@ -17,7 +17,6 @@
         "network",
         "pulseaudio#outputDevice",
         "backlight",
-        "memory",
         "battery"
     ],
 
@@ -31,7 +30,7 @@
             "default": "",
             "urgent": "",
         },
-    },
+    }, 
     "custom/void":{ 
     	"format": "  ",
     		"tooltip": false,
@@ -45,8 +44,8 @@
     },
 
     "idle_inhibitor": {
-        "tooltip-format-activated": "Idle inhibitor active",
-        "tooltip-format-deactivated": "Idle inhibitor not active",
+/*        "tooltip-format-activated": "Active",
+        "tooltip-format-deactivated": "Not active",*/
         "format": "{icon}",
         "format-icons": {
             "activated": " ",
@@ -78,9 +77,9 @@
                 "", "", "󰕾",  ""
             ],
         },
-        "tooltip-format": "{desc}",
+/*        "tooltip-format": "{desc}", */
 
-        "on-click": "foot -e wiremix -t 3"
+        "on-click": "foot -e wiremix"
     },
 
     "pulseaudio#inputDevice": {
@@ -89,18 +88,18 @@
         "format-source-muted": "",
         "tooltip-format": "{source_desc}",
 
-        "on-click": "foot -e wiremix -t 4"
+        "on-click": "foot -e wiremix"
     },
 
     "network":
     {
         "format-wifi": "{icon}",
-        "format-disconnected": "󰤮",
-        "format-disabled": "󰤫",
-        "tooltip-format-ethernet": "Interface: {ifname}\nIP address: {ipaddr}\nGateway address: {gwaddr}\nSubnetmask: {netmask}",
-        "tooltip-format-wifi": "SSID: {essid}\nIP address: {ipaddr}\nGateway address: {gwaddr}\nSubnetmask: {netmask}",
+        "format-disconnected": "󰤮 ",
+        "format-disabled": "󰤫 ",
+/*        "tooltip-format-ethernet": "Interface: {ifname}\nIP address: {ipaddr}\nGateway address: {gwaddr}\nSubnetmask: {netmask}",
+        "tooltip-format-wifi": "SSID: {essid}\nIP address: {ipaddr}\nGateway address: {gwaddr}\nSubnetmask: {netmask}", */
         "on-click": "foot -e impala",
-        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+        "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "]
     },
 
     "cpu":
@@ -151,8 +150,6 @@
     {
         "format": " {percentage}%",
         "tooltip-format": "Memory: {used}GiB/{total}GiB\nSwap: {swapUsed}GiB/{swapTotal}GiB",
-        "interval": 1,
-        "on-click": "foot -e btop"
     },
 
     "battery":
@@ -166,8 +163,9 @@
             "critical": 20
         },
 
+        "on-click": "foot -e btop",
         "format": "{icon} {capacity}%",
-
+		"tooltip": "false",
         "format-charging": " {capacity}%",
         "format-plugged": "󱘖 {capacity}%",
         "format-full": "{icon} Full",

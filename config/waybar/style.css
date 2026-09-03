@@ -15,23 +15,23 @@
     margin-top: 2px;
     margin-bottom: 2px;
 
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 4px;
+    padding-right: 4px;
 
-    min-height: 26px
+    min-height: 24px
 }
 
 #workspaces button {
-    margin-left: 4px;
-    margin-right: 4px;
+    margin-left: 3px;
+    margin-right: 3px;
 
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 4px;
+    padding-right: 4px;
 
     border-radius: 2px;
     min-width: 0px;
 
-    color: #689d6a;
+    color: #ebdbb2;
 }
 
 #workspaces button.active {
@@ -271,5 +271,5 @@
     color: #bfff64;
 }
 #custom-void {
-	color: #478061;
+	color: #ebdbb2;
 }
