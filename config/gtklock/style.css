@@ -14,6 +14,8 @@ window {
 
 /* Fecha */
 #date-label {
+    font-family: "JetBrains Mono", "monospace";
+    font-weight: bold;
 	color: #ffffff;
 	font-size: 18px;
 	font-weight: normal;
@@ -22,6 +24,8 @@ window {
 
 /* 2. Etiqueta "Password:" */
 #input-label {
+    font-family: "JetBrains Mono", "monospace";
+    font-weight: bold;
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
@@ -55,6 +59,9 @@ window {
 /* Boton de desbloqueo */
 button,
 #unlock-button {
+    font-family: "JetBrains Mono", "monospace";
+    font-size: 13px;
+    font-weight: bold;
     background-image: none;
     background-color: #303030;
     color: #ffffff;
