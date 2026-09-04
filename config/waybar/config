@@ -14,23 +14,36 @@
     [
     	"tray",
         "idle_inhibitor",
+        "bluetooth",
         "network",
         "pulseaudio#outputDevice",
         "backlight",
         "battery"
     ],
 
+    "ext/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": " {icon} ",
+        "format-icons": {
+            "1": "1", "2": "2", "3": "3", "4": "4", "5": "5",
+            "6": "6", "7": "7", "8": "8", "9": "9", "10": "10",
+            "active": "󰮯",
+            "default": "󰊠"
+        }
+    },
 
-    "ext/workspaces":
+/*    "ext/workspaces":
     {
-        "format": "{id} {icon} ",
+        "format": "{id}{icon} ",
         "format-icons":
         {
             "active": "",
             "default": "",
-            "urgent": "",
+            "urgent": "",
         },
-    }, 
+    }, */
     "custom/void":{ 
     	"format": "  ",
     		"tooltip": false,
@@ -52,9 +65,15 @@
             "deactivated": " ",
         }
     },
-
-    "clock":
-    {
+    
+	"bluetooth": {
+		"format": "󰂯",
+		"format-connected": "󰂱",
+		"format-disabled": "󰂲",
+		"on-click": "foot -e bluetui"
+	},
+	
+    "clock": {
         "format": "{:%d %B - %I:%M %p}",
         "tooltip": false
     },

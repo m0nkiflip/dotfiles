@@ -7,22 +7,22 @@ $username$hostname $directory$git_branch$character
 
 # Configurar el usuario
 [username]
-style_user = "bold green"
+style_user = "bold #478061"
 show_always = true
-format = "   [󱞩 $user]($style)"
+format = "   [󱞩 m0nkiflip]($style)"
 
 # Configurar el hostname
 [hostname]
 ssh_only = false
-style = "bold white"
-format = " 󰹻 [voidpad]($style)"
+style = "bold #96C5AB"
+format = " 󰹻 [$hostname]($style)"
 
 # Configurar el directorio
 [directory]
-style = "bold cyan"
+style = "bold #96C5AB"
 truncation_length = 3
 
 # Configurar el símbolo final
 [character]
-success_symbol = "[❯](bold green)"
+success_symbol = "[❯](bold #478061)"
 error_symbol = "[❯](bold red)"
