@@ -5,8 +5,6 @@
     [
     	"custom/void",
         "ext/workspaces",
-        "dwl/window",
-        "custom/weather"
     ],
     "modules-center":
     [
@@ -16,41 +14,28 @@
     [
     	"tray",
         "idle_inhibitor",
-        "bluetooth",
         "network",
         "pulseaudio#outputDevice",
         "backlight",
         "battery"
     ],
 
-    "ext/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "on-click": "activate",
-        "format": " {icon} ",
-        "format-icons": {
-            "active": "󰮯",
-            "default": "󰊠"
-        }
-    },
 
+    "ext/workspaces":
+    {
+        "format": "{id} {icon} ",
+        "format-icons":
+        {
+            "active": "",
+            "default": "",
+            "urgent": "",
+        },
+    }, 
     "custom/void":{ 
     	"format": "  ",
     		"tooltip": false,
     	"on-click": "~/.local/bin/fuzzel-powermenu"
     },
-
-	"dwl/window": {
-	    "format": "~ {app_id}",
-	    "max-length": 15
-	},
-	
-	"custom/weather": {
-	    "exec": "curl -s 'wttr.in/Culiacan?format=%t'",
-	    "format": "    󰖐 {}",
-	    "interval": 3600,
-	    "tooltip": false
-	},
 
     "tray":
     {
@@ -59,24 +44,17 @@
     },
 
     "idle_inhibitor": {
-        "tooltip-format-activated": "Active",
-        "tooltip-format-deactivated": "Not active",
+/*        "tooltip-format-activated": "Active",
+        "tooltip-format-deactivated": "Not active",*/
         "format": "{icon}",
         "format-icons": {
             "activated": " ",
             "deactivated": " ",
         }
     },
-    
-	"bluetooth": {
-		"format": "󰂯",
-		"format-connected": "󰂱",
-		"tooltip-format-connected": "{source_desc}",
-		"format-disabled": "󰂲",
-		"on-click": "foot -e bluetui"
-	},
-	
-    "clock": {
+
+    "clock":
+    {
         "format": "{:%d %B - %I:%M %p}",
         "tooltip": false
     },
@@ -118,8 +96,8 @@
         "format-wifi": "{icon}",
         "format-disconnected": "󰤮 ",
         "format-disabled": "󰤫 ",
-        "tooltip-format-ethernet": "Interface: {ifname}\nIP address: {ipaddr}\nGateway address: {gwaddr}\nSubnetmask: {netmask}",
-        "tooltip-format-wifi": "SSID: {essid}\nIP address: {ipaddr}\nGateway address: {gwaddr}\nSubnetmask: {netmask}",
+/*        "tooltip-format-ethernet": "Interface: {ifname}\nIP address: {ipaddr}\nGateway address: {gwaddr}\nSubnetmask: {netmask}",
+        "tooltip-format-wifi": "SSID: {essid}\nIP address: {ipaddr}\nGateway address: {gwaddr}\nSubnetmask: {netmask}", */
         "on-click": "foot -e impala",
         "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "]
     },
@@ -128,20 +106,9 @@
     {
         "format": " {usage}% ",
     },
-    "backlight": {
-        "device": "intel_backlight",
-        "format": "{icon} {percent}%",
-        "format-icons": ["󰃞", "󰃟", "󰃠"],
-        // Click izquierdo: 1% | Click derecho: 50% | Clic central: 100%
-        "on-click": "brightnessctl -d intel_backlight set 1%",
-        "on-click-right": "brightnessctl -d intel_backlight set 50%",
-        "on-click-middle": "brightnessctl -d intel_backlight set 100%",
-        "tooltip": false,
-    },
-    
-/*    "backlight":
+
+    "backlight":
     {
-    	"device": "intel_backlight"
         "format": "{icon} {percent}%",
         "states":
         {
@@ -155,7 +122,7 @@
         },
         "format-icons":
             [
-        "",
+            "",
         "",
         "",
         "󰃞",
@@ -163,7 +130,21 @@
         "󰃟",
         "󰃠"
             ],
-    }, */
+    },
+
+    "hyprland/language":
+    {
+        "format-en": "EN",
+        "format-ar": "AR",
+        "format-zh": "ZH",
+        "format-in": "HI",
+        "format-es": "ES",
+        "format-fr": "FR",
+        "format-ru": "RU",
+        "format-pt": "PT",
+        "format-bn": "BN",
+        "format-de": "DE"
+    },
 
     "memory":
     {
@@ -179,12 +160,12 @@
             "good": 80,
             "meh": 50,
             "warning": 40,
-            "critical": 25
+            "critical": 20
         },
 
         "on-click": "foot -e btop",
         "format": "{icon} {capacity}%",
-		"tooltip": false,
+		"tooltip": "false",
         "format-charging": " {capacity}%",
         "format-plugged": "󱘖 {capacity}%",
         "format-full": "{icon} Full",
@@ -196,5 +177,18 @@
         "format-time": "{H}h {M}min",
         "tooltip": true,
         "tooltip-format": "{timeTo} {power}w",
+    }
+
+/*    "power-profiles-daemon": {
+        "format": "{icon} ",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons":
+        {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }*/
     },
 }

@@ -1,0 +1,192 @@
+/* ─── Noctalia-inspired Waybar stylesheet ─── */
+/* GruvboxAlt dark colors, floating bar with 12px radius */
+
+* {
+    all: initial;
+    font-family:
+        "JetBrainsMono Nerd Font", "JetBrains Mono", "Font Awesome 6 Free",
+        monospace;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* ─── Main Bar ─── */
+#waybar {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* ─── Module Sections ─── */
+.modules-left {
+    background-color: rgba(29, 32, 33, 0.85);
+    color: #ebdbb2;
+    border-radius: 12px;
+    padding: 0px 2px;
+}   
+.modules-center {
+    background-color: rgba(29, 32, 33, 0.85);
+    color: #ebdbb2;
+    border-radius: 12px;
+    padding: 0px 8px;
+}    
+.modules-right {
+    background-color: rgba(29, 32, 33, 0.85);
+    color: #ebdbb2;
+    border-radius: 12px;
+    padding: 0 4px;
+}
+/* ─── Individual Modules ─── */
+#tray,
+#battery,
+#pulseaudio,
+#network {
+    color: #478061;
+}
+#custom-void {
+    color: #478061;
+    font-size: 18px;
+    margin: 4px;
+    padding-left: 0px;
+    padding-right: 2px;
+}
+
+#custom-surge {
+	color: #478061;
+    font-size: 14px;
+    margin: 4px;
+    padding-left: 0px;
+    padding-right: 2px;
+}
+#clock {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ─── System Tray ─── */
+#tray {
+    background-color: transparent;
+    padding: 4px 0px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: rgba(214, 93, 14, 0.3);
+}
+
+#bluetooth {
+    color: #478061;
+    font-weight: bold;
+}
+
+#network {
+    padding-left: 0px;
+    padding-right: 6px;
+}
+#custom-power {
+    color: #478061;
+    font-size: 14px;
+    font-weight: bold;
+}
+    
+/* ─── Notifications ─── */
+#custom-notifications {
+    color: #689d6a;
+}
+
+#custom-notifications.has-notifications {
+    color: #fb4934;
+}
+
+/* ─── Battery ─── */
+#battery {
+    color: #478061;
+    font-size: 16px;
+    font-weight: bold;
+    padding-right: 0px;
+}
+
+#battery.warning {
+    color: #478061;
+    font-size: 16px;
+}
+
+#battery.critical {
+    color: #804747;
+    font-size: 16px;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: #4B804D;
+    font-size: 16px;
+}
+
+/* ─── Pulseaudio ─── */
+#pulseaudio {
+    color: #478061;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#pulseaudio.muted {
+    color: #478061;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* ─── Clock ─── */
+#clock {
+    color: #478061;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+#custom-layout:hover {
+    background-color: rgba(142, 192, 124, 0.15);
+}
+
+/* ─── Custom Button ─── */
+/* ─── Workspaces ─── */
+#workspaces {
+    background-color: #478061;
+    border-radius: 8px;
+    margin: 6px;
+    padding: 1px 1px;
+}
+
+#workspaces * {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#workspaces button label {
+    font-size: 15px;
+    font-weight: bold;
+    color: #313244;
+    padding: 0 5px;
+}
+#workspaces button.focused,
+#workspaces button.active {
+    background-color: #313244;
+    border-radius: 7px;
+    min-width: 10px;
+    padding: 0px 4px;
+    transition: all 0.1s ease;
+}
+#workspaces button.focused label,
+#workspaces button.active label {
+    color: #478061;
+    padding: 0px 4px;
+}
+
+#custom-tlp {
+	color: #478061;
+    font-size: 14px;
+    font-weight: bold;
+}

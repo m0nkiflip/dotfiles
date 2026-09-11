@@ -1,0 +1,16 @@
+>mangowm
+>fastfetch
+>fish
+>mako
+>foot
+>fuzzel+powermenu.sh
+>swayidle
+>waybar
+>yazi
+>nwg-look
+>localsend
+>timeshift
+>easyeffects
+>impala
+>wiremix
+>blutui

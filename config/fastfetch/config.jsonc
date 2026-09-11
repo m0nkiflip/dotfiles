@@ -5,9 +5,12 @@
     	"padding": {
     		"top": 1,
     		"left": 2,
-    		"right": 2
+    		"right": 2,
+    		"color": {
+    			"1": "yellow"
+    			},
     	},
-    	"source": "void2_small"
+    	"source": "void2_small",
     },
     "display": {
         "separator": "  ",
@@ -36,10 +39,9 @@
             "KeyColor": "white "
         },
         {
-            "type": "command",
-            "key": "│ 󱎫  age    │",
+            "type": "uptime",
+            "key": "│ 󱎫  uptime │",
             "KeyColor": "white ",
-            "text": "echo $(( ($(date +%s) - $(stat -c %W /)) / 86400)) days"
         },
         {
             "type": "command",

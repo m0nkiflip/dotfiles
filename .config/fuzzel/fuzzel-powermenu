@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Opciones del menú
+SELECTION=$(printf " Apagar\n Reiniciar\n󰤄 Suspender" | fuzzel -d -p "Power Menu: " -l 3 -w 15)
+
+case "$SELECTION" in
+    " Apagar")
+        sudo poweroff
+        ;;
+    " Reiniciar")
+        sudo reboot
+        ;;
+    "󰤄 Suspender")
+        sudo zzz
+        ;;
+esac

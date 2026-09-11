@@ -20,3 +20,13 @@ hash = "b967c24a30350b1c5cd3a2ad5a7732e7"
 use = "gosxrgxx/flexoki-dark"
 rev = "25d28ce"
 hash = "8e6dd7e42a127173e4535993d3e0e393"
+
+[[flavor.deps]]
+use = "malick-tammal/monokai"
+rev = "57be034"
+hash = "9fbb5104646853a933446746b88118a6"
+
+[[flavor.deps]]
+use = "rapidrabbit76/claude-inspired"
+rev = "6646a90"
+hash = "880312879b18b91e4a356f6a359e108a"

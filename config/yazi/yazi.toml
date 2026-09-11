@@ -1,6 +1,3 @@
-[flavor]
-use = "dracula.yazi"
-
 [opener]
 play = [
     { run = 'mpv "$@"', orphan = true, for = "unix" }
